@@ -52,6 +52,11 @@
   font-size: 64px;
   text-align: center;
   transition: 0.5s;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .gameCell:hover {

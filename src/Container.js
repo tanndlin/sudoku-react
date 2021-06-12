@@ -4,7 +4,15 @@ const Container = () => {
   const handleCellClick = (e) => {
     if (!e.shiftKey) {
       selected.forEach((s) => s.classList.remove('highlighted'));
+      e.target.classList.add('highlighted');
       selected = [e.target];
+      return;
+    }
+
+    if (selected.includes(e.target)) {
+      e.target.classList.remove('highlighted');
+      selected.splice(selected.indexOf(e.target), 1);
+      return;
     }
 
     e.target.classList.add('highlighted');

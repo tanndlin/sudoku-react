@@ -98,7 +98,7 @@ class Sudoku {
           continue;
         }
 
-        ret.push(this.board[j][i]);
+        ret.push(this.board[i][j]);
       }
     }
 
@@ -107,6 +107,17 @@ class Sudoku {
 
   checkFilled() {
     return !this.board.some((row) => row.includes(0));
+  }
+
+  checkSolution() {
+    const cells = Array.from(document.getElementsByClassName('gameCell'));
+    return cells.every((c) => {
+      const [, id] = c.id.split(' ');
+      const x = parseInt(id) % 9;
+      const y = Math.floor(parseInt(id) / 9);
+
+      return this.board[y][x] === parseInt(c.innerHTML);
+    });
   }
 }
 

@@ -2,7 +2,7 @@ import Sudoku from './sudoku';
 
 const Topbar = () => {
   const score = 0;
-  const fillRate = 0.3;
+  const fillRate = 1;
   const board = new Sudoku();
 
   const setCell = (valueObj) => {
@@ -43,10 +43,15 @@ const Topbar = () => {
     }, 10);
   };
 
+  const checkSolution = () => {
+    const isCorrect = board.checkSolution();
+    console.log(isCorrect);
+  };
+
   return (
     <nav className="topbar">
-      <h1 id="score">Score: {score}</h1>
       <button onClick={generateSudoku}>Generate Sudoku</button>
+      <button onClick={checkSolution}>Check Solution</button>
     </nav>
   );
 };

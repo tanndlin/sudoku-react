@@ -45,6 +45,12 @@ const Topbar = () => {
   const checkSolution = () => {
     const isCorrect = board.checkSolution();
     console.log(isCorrect);
+    if (!isCorrect) {
+      return;
+    }
+
+    const cells = Array.from(document.getElementsByClassName('gameCell'));
+    cells.forEach((c) => (c.innerHTML = 'yeet'));
   };
 
   return (

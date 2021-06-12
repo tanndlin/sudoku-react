@@ -1,8 +1,4 @@
 class Sudoku {
-  constructor() {
-    // this.createNewBoard();
-  }
-
   createNewBoard() {
     this.index = 0;
     this.board = [];

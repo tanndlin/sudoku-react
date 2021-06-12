@@ -1,7 +1,6 @@
 import Sudoku from './sudoku';
 
 const Topbar = () => {
-  const score = 0;
   const fillRate = 1;
   const board = new Sudoku();
 
@@ -50,8 +49,12 @@ const Topbar = () => {
 
   return (
     <nav className="topbar">
-      <button onClick={generateSudoku}>Generate Sudoku</button>
-      <button onClick={checkSolution}>Check Solution</button>
+      <button className="button" onClick={generateSudoku}>
+        Generate Sudoku
+      </button>
+      <button className="button" onClick={checkSolution}>
+        Check Solution
+      </button>
     </nav>
   );
 };

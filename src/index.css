@@ -10,8 +10,8 @@
   background-color: rgb(51, 51, 51);
   /* height: 100%; */
 }
-#score {
-  padding-right: 100px;
+.button {
+  margin: 0 100px;
 }
 
 .topbar {

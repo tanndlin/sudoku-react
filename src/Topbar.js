@@ -1,7 +1,7 @@
 import Sudoku from './sudoku';
 
 const Topbar = () => {
-  const fillRate = 1;
+  const fillRate = 0.3;
   const board = new Sudoku();
 
   const setCell = (valueObj) => {
